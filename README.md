@@ -40,13 +40,13 @@ Gordon
 ```
 
 ### Example 2 - Company Domain For Email Address
-This example shows how to generate a first name, last name, company name and email address. The email address generated will be in the format of firstname.lastname@companyname.extension were the company name has all spaces and punctuation stripped from it and the extension is randomly selected.
+This example shows how to generate a first name, last name, company name and email address. The email address generated will be in the format of firstname.lastname@companyname.extension were the company name has all spaces and punctuation stripped from it and the extension, if not specified, is randomly selected.
 ```sh
 _include("fake-data-include.sah");
 var $firstName = getFirstName();
 var $lastName = getLastName();
 var $companyName = getCompany();
-var $email = getEmail();
+var $email = getEmail($firstName, $lastName, $companyName);
 _log($firstName);
 _log($lastName);
 _log($companyName);
@@ -61,12 +61,12 @@ gordon.peters@strackeltd.net
 ```
 
 ### Example 3 - Specific Domain For Email Address
-This example shows how to generate a first name, last name and email address, where you want the email to go to a specific location, in this case to the anonymous email service mailinator.com. The email function allows two parameters to be passed into it, the first being the domain name and the second being the domain extension.
+This example shows how to generate a first name, last name and email address, where you want the email to go to a specific location, in this case to the anonymous email service mailinator.com. The email function allows four parameters to be passed into it, the first being the first name of the recipient, the second being the last name of the recipient, the third being the domain name and the fourth being the domain extension.
 ```sh
 _include("fake-data-include.sah");
 var $firstName = getFirstName();
 var $lastName = getLastName();
-var $email = getEmail("mailinator", "com");
+var $email = getEmail($firstName, $lastName, "mailinator", "com");
 _log($firstName);
 _log($lastName);
 _log($email);

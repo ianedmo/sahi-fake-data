@@ -51,14 +51,18 @@ function getCompany() {
 	return $company;
 }
 
-function getEmail($companyName, $domainSuffix) {
-	if($companyName == null){
-		var $domain = $company;
-		var $domain = $domain.replace(/ /g, "");
+function getEmail($firstName, $lastName, $companyName, $domainSuffix) {
+
+	if($firstName == null){
+		var $firstName = getFirstName();
 	}
-	else
-	{
-		var $domain = $companyName;
+
+	if($lastName == null){
+		var $lastName = getLastName();
+	}
+
+	if($companyName == null){
+		var $companyName = getCompany();
 	}
 	
 	if($domainSuffix == null) {
@@ -66,7 +70,8 @@ function getEmail($companyName, $domainSuffix) {
 	}
 	
 	var $lastNameEmail = $lastName.replace("'","");
-	var $email = $firstName + "." + $lastNameEmail + "@" + $domain + "." + $domainSuffix;
+	var $email = $firstName + "." + $lastNameEmail + "@" + $companyName + "." + $domainSuffix;
+	var $email = $email.replace(/ /g, "");
 	return $email.toLowerCase();
 }
 
