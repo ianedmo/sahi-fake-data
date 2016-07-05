@@ -1,10 +1,4 @@
-/*
-	Fake Data API
-	Created By: Michael Haselhurst
-	Created On: 20/05/2015
-*/
-
-_include("include.sah");
+_include("fake-data-include.sah");
 
 var $title = getTitle();
 var $firstName = getFirstName();
