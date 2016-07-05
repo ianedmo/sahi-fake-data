@@ -1,0 +1,33 @@
+/*
+	Fake Data API
+	Created By: Michael Haselhurst
+	Created On: 20/05/2015
+*/
+
+_include("include.sah");
+
+var $title = getTitle();
+var $firstName = getFirstName();
+var $lastName = getLastName();
+var $company = getCompany();
+var $email = getEmail();
+var $address1 = getStreet();
+var $address2 = getTown();
+var $city = getCity();
+var $county = getCounty();
+var $postcode = getPostcode();
+var $eircode = getEircode();
+var $telephone = getTelephone();
+
+_log($title);
+_log($firstName);
+_log($lastName);
+_log($company);
+_log($email);
+_log($address1);
+_log($address2);
+_log($city);
+_log($county);
+_log($postcode);
+_log($eircode);
+_log($telephone);
