@@ -27,7 +27,7 @@ When you implement this sahi-fake-data library into your project you'll likely w
 ## Code Example
 
 ### Example 1 - First Name
-This example showes you how to generate a random first name.
+This example shows you how to generate a random first name.
 ```sh
 _include("fake-data-include.sah");
 
