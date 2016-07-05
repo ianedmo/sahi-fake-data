@@ -1,8 +1,4 @@
-/*
-	Fake Data API
-	Created By: Michael Haselhurst
-	Created On: 20/05/2015
-*/
+var $csvLocation = "\\CSV\\";
 
 function randomNumber($len)
 {
@@ -10,7 +6,7 @@ function randomNumber($len)
 }
 
 function getTitle() {
-	var $data = _readCSVFile("\\CSV\\name_prefix.csv");
+	var $data = _readCSVFile($csvLocation + "name_prefix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -18,7 +14,7 @@ function getTitle() {
 }
 
 function getFirstName() {
-	var $data = _readCSVFile("\\CSV\\first_name.csv");
+	var $data = _readCSVFile($csvLocation + "first_name.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -26,7 +22,7 @@ function getFirstName() {
 }
 
 function getLastName() {
-	var $data = _readCSVFile("\\CSV\\last_name.csv");
+	var $data = _readCSVFile($csvLocation + "last_name.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -34,7 +30,7 @@ function getLastName() {
 }
 
 function getCompanySuffix() {
-	var $data = _readCSVFile("\\CSV\\company_suffix.csv");
+	var $data = _readCSVFile($csvLocation + "company_suffix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -75,7 +71,7 @@ function getEmail($companyName, $domainSuffix) {
 }
 
 function getDomainSuffix() {
-	var $data = _readCSVFile("\\CSV\\domain_suffix.csv");
+	var $data = _readCSVFile($csvLocation + "domain_suffix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -89,7 +85,7 @@ function getStreetNumber() {
 }
 
 function getStreetSuffix() {
-	var $data = _readCSVFile("\\CSV\\street_suffix.csv");
+	var $data = _readCSVFile($csvLocation + "street_suffix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -121,7 +117,7 @@ function getCity() {
 }
 
 function getCityPrefix() {
-	var $data = _readCSVFile("\\CSV\\city_prefix.csv");
+	var $data = _readCSVFile($csvLocation + "city_prefix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -129,7 +125,7 @@ function getCityPrefix() {
 }
 
 function getCitySuffix() {
-	var $data = _readCSVFile("\\CSV\\city_suffix.csv");
+	var $data = _readCSVFile($csvLocation + "city_suffix.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
@@ -137,7 +133,7 @@ function getCitySuffix() {
 }
 
 function getCounty() {
-	var $data = _readCSVFile("\\CSV\\county.csv");
+	var $data = _readCSVFile($csvLocation + "county.csv");
 	var $len = $data.length-1;
 	var $random = randomNumber($len);
 	var $row = $data[$random];
